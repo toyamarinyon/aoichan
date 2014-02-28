@@ -1,0 +1,17 @@
+
+// Import compass
+// ---------------------------------------------------------
+
+@import compass
+
+// Zurui Design Semiflat
+// ---------------------------------------------------------
+
+=gradient-top-lighten ($color : #666, $lighten: 5%)
+  background-color: $color
+  +filter-gradient(lighten($color, $lighten), $color,vertical)
+  +background-image(linear-gradient(lighten($color,$lighten) 0%, $color 100%))
+=gradient-bottom-darken ($color : #fff, $darken: 5%)
+  background-color: $color
+  +filter-gradient($color, darken($color, $darken), vertical)
+  +background-image(linear-gradient($color 0%, darken($color,$darken) 100%))
