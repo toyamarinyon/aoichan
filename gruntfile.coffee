@@ -26,7 +26,7 @@ module.exports = (grunt) ->
           "compass"
       image:
         files:
-          directoryConfig.appSrc+"/**/*.png"
+          directoryConfig.appSrc+"/**/*.{png,gif}"
         tasks:
           "imagemin"
 
@@ -70,7 +70,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: directoryConfig.appSrc
-          src: "**/*.png"
+          src: "**/*.{png,gif}"
           dest: directoryConfig.appDist
         ]
 
